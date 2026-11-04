@@ -33,3 +33,16 @@ print("\nFilas de abril:", len(abril), "| filas de mayo:", len(mayo))
 
 total = pd.concat([abril, mayo])
 print("Filas tras concat:", len(total), "| filas originales:", len(ventas))
+
+
+# --- Mis propias líneas ---
+print("\nMi loc:")
+print(ventas.loc["V010", ["producto", "total"]])
+
+print("\nMi iloc:")
+print(ventas.iloc[0, 2])
+
+print("\nMi concat:")
+primeras = ventas.iloc[0:3]
+ultimas = ventas.iloc[-3:]
+print(pd.concat([primeras, ultimas]))
